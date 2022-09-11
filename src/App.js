@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-rou
 import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "./components/Navbar";
+import Copyright from "./components/Copyright";
 import PrivateRoute from "./components/PrivateRoute";
 import Explore from "./pages/Explore";
 import Offers from "./pages/Offers";
@@ -20,6 +21,8 @@ function App() {
     <>
     
       <Router>
+      
+      <Navbar />
         <Routes>
           <Route path='/' element={<Explore/>}/>
           <Route path='/offers' element={<Offers/>}/>
@@ -38,8 +41,9 @@ function App() {
           <Route path='/contact/:landlordId' element={<Contact/>} />
 
         </Routes>
-        <Navbar />
+        
       </Router>
+        <Copyright />
 
       <ToastContainer />
      

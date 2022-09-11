@@ -6,17 +6,22 @@
 html::-webkit-scrollbar {
   display: none;
 }
+/* #d9b03f orange
+   #6da5c6 blue
 
+*/
 body {
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   background-color: #f2f4f8;
   margin: 0;
   box-sizing: border-box;
 }
 
+
 a {
   text-decoration: none;
-  display: block;
+  /* display: block; */
   color: #000000;
 }
 
@@ -140,7 +145,7 @@ button {
 }
 
 .navbar {
-  /* position: fixed; */
+  position: fixed;
   left: 0;
   bottom: 0;
   right: 0;
@@ -154,7 +159,7 @@ button {
 
 .navbarNav {
   width: 100%;
-  margin-top: 0.75rem;
+  /* margin-top: 0.75rem; */
   overflow-y: hidden;
 }
 
