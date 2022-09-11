@@ -12,7 +12,7 @@ function ListingItem({listing, id, onDelete, onEdit}) { //props
         to={`/category/${listing.type}/${id}`} // listing type (sale or rent), id = coming from props
         className='categoryListingLink'>
             <img
-          src={listing.imageUrls[0]} //coming from firebase
+          src={listing.imgUrls[0]} //coming from firebase
           alt={listing.name}
           className='categoryListingImg'
         />
@@ -59,7 +59,8 @@ function ListingItem({listing, id, onDelete, onEdit}) { //props
       )}
 
       {onEdit && <EditIcon className='editIcon' onClick={() => onEdit(id)} />}
-
+      {/* if on edit,
+      then we show a edit icon  */}
     </li>
   )
 }
