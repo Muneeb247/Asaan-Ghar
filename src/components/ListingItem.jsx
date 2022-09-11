@@ -16,7 +16,7 @@ function ListingItem({listing, id, onDelete, onEdit}) { //props
           alt={listing.name}
           className='categoryListingImg'
         />
-        <div className="categoryListingDeatils">
+        <div className="categoryListingDetails">
             <p className="categoryListingLocation">
                 {listing.location}
             </p>
