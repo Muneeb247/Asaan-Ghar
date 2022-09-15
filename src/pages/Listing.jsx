@@ -11,6 +11,10 @@ import { db } from '../firebase.config'
 import Spinner from '../components/Spinner'
 import shareIcon from '../assets/svg/shareIcon.svg'
 // SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
+import {
+  MDBCarousel,
+  MDBCarouselItem,
+} from 'mdb-react-ui-kit';
 
 
 function Listing() {
@@ -45,7 +49,20 @@ function Listing() {
   return (
     <main>
         {/* Slider */}
-        
+        <MDBCarousel showControls>
+          {listing.imgUrls.map((url, index) => (
+            <MDBCarouselItem
+            className='w-100 d-block'
+            // src={listing.imgUrls.map()}
+            alt='...'
+            key={index}
+            style={{ 
+              background:`url(${listing.imgUrls[index]})
+              center no-repeat`,
+              backgroundSize: "cover", height: "500px"  }}
+          />
+          ))}
+        </MDBCarousel>
       
 
         <div

@@ -40,6 +40,10 @@ function Navbar() {
                     <PersonOutlineIcon fill={pathMatchRoute('/profile') ? '#2c2c2c' : '#8f8f8f'} width="36px" height="36px"/>
                 <p className={pathMatchRoute('/profile') ? 'navbarListItemNameActive' : 'navbarListItemName' }>Profile</p>
                 </li>
+                <li className="navbarListItem" onClick={() => navigate('/about-us')}>
+                    <PersonOutlineIcon fill={pathMatchRoute('/profile') ? '#2c2c2c' : '#8f8f8f'} width="36px" height="36px"/>
+                <p className={pathMatchRoute('/profile') ? 'navbarListItemNameActive' : 'navbarListItemName' }>Aboout Us</p>
+                </li>
             </ul>
         </nav>
     </footer>

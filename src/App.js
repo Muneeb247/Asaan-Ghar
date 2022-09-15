@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "./components/Navbar";
 import Copyright from "./components/Copyright";
 import PrivateRoute from "./components/PrivateRoute";
+import Footer from './components/Footer'
 import Explore from "./pages/Explore";
 import Offers from "./pages/Offers";
 import Category from "./pages/Category";
@@ -15,6 +16,7 @@ import CreateListing from "./pages/CreateListing";
 import EditListing from "./pages/EditListing";
 import Listing from './pages/Listing'
 import Contact from './pages/Contact'
+import AboutUs from './pages/AboutUs'
 
 function App() {
   return (
@@ -39,10 +41,12 @@ function App() {
           <Route path='/edit-listing/:listingId' element={<EditListing/>}/>
           <Route path='/category/:categoryName/:listingId' element={<Listing/>} />
           <Route path='/contact/:landlordId' element={<Contact/>} />
+          <Route path='/about-us' element={<AboutUs/>} />
 
         </Routes>
         
       </Router>
+      <Footer/>
         <Copyright />
 
       <ToastContainer />
