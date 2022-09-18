@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../assets/asaanGharLogo.png"
+import { Link } from "react-router-dom"
 
 function Footer() {
   return (
@@ -105,11 +105,11 @@ function Footer() {
             </li>
 
             <li>
-              <a href="#" className="footer-link">About</a>
+              <a href="/about-us" className="footer-link">About us</a>
             </li>
 
             <li>
-              <a href="#" className="footer-link">Blog</a>
+              <a href="/team" className="footer-link">Our Team</a>
             </li>
 
             <li>

@@ -17,6 +17,7 @@ import EditListing from "./pages/EditListing";
 import Listing from './pages/Listing'
 import Contact from './pages/Contact'
 import AboutUs from './pages/AboutUs'
+import Team from "./pages/Team";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path='/category/:categoryName/:listingId' element={<Listing/>} />
           <Route path='/contact/:landlordId' element={<Contact/>} />
           <Route path='/about-us' element={<AboutUs/>} />
+          <Route path='/team' element={<Team/>} />
 
         </Routes>
         
