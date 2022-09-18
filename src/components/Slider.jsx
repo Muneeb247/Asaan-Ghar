@@ -16,8 +16,8 @@ function Slider() {
         src={sliderPic1}
         alt='...'
       >
-        <h5>First slide label</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <h5>Welcome to Asaan Ghar</h5>
+        <p>Comfortable and Affordable Hostels Rooms.</p>
       </MDBCarouselItem>
 
       <MDBCarouselItem
@@ -26,8 +26,8 @@ function Slider() {
         src={sliderPic2}
         alt='...'
       >
-        <h5>Second slide label</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h5>Just like your Home.</h5>
+        <p>A Best Place to Stay.</p>
       </MDBCarouselItem>
 
       <MDBCarouselItem
@@ -36,8 +36,8 @@ function Slider() {
         src={sliderPic3}
         alt='...'
       >
-        <h5>Third slide label</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        <h5>Buy or Sale</h5>
+        <p>Buy or Sale a room or an Appartment</p>
       </MDBCarouselItem>
     </MDBCarousel>
   )
