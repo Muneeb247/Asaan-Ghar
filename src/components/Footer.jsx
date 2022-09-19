@@ -35,7 +35,7 @@ function Footer() {
           </a> */}
 
           <p className="section-text">
-            Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.
+          Our goal is to provide the best accommodations and offers for the students through our website. 
           </p>
 
           <ul className="contact-list paddingleft">
@@ -113,19 +113,11 @@ function Footer() {
             </li>
 
             <li>
-              <a href="#" className="footer-link">All Products</a>
+              <a href="/" className="footer-link">All Products</a>
             </li>
 
             <li>
-              <a href="#" className="footer-link">Locations Map</a>
-            </li>
-
-            <li>
-              <a href="#" className="footer-link">FAQ</a>
-            </li>
-
-            <li>
-              <a href="#" className="footer-link">Contact us</a>
+              <a href="/about-us" className="footer-link">About us</a>
             </li>
 
           </ul>
@@ -133,31 +125,19 @@ function Footer() {
           <ul className="footer-list">
 
             <li>
-              <p className="footer-list-title">Services</p>
+              <p className="footer-list-title">Account related</p>
             </li>
 
             <li>
-              <a href="#" className="footer-link">Order tracking</a>
+              <a href="/sign-up" className="footer-link">Sign Up</a>
             </li>
 
             <li>
-              <a href="#" className="footer-link">Wish List</a>
+              <a href="/sign-in" className="footer-link">Login</a>
             </li>
 
             <li>
-              <a href="#" className="footer-link">Login</a>
-            </li>
-
-            <li>
-              <a href="#" className="footer-link">My account</a>
-            </li>
-
-            <li>
-              <a href="#" className="footer-link">Terms & Conditions</a>
-            </li>
-
-            <li>
-              <a href="#" className="footer-link">Promotional Offers</a>
+              <a href="/profile" className="footer-link">My account</a>
             </li>
 
           </ul>
@@ -165,31 +145,19 @@ function Footer() {
           <ul className="footer-list">
 
             <li>
-              <p className="footer-list-title">Customer Care</p>
+              <p className="footer-list-title">Customer</p>
             </li>
 
             <li>
-              <a href="#" className="footer-link">Login</a>
+              <a href="/sign-in" className="footer-link">Login</a>
             </li>
 
             <li>
-              <a href="#" className="footer-link">My account</a>
+              <a href="/profile" className="footer-link">My account</a>
             </li>
 
             <li>
-              <a href="#" className="footer-link">Wish List</a>
-            </li>
-
-            <li>
-              <a href="#" className="footer-link">Order tracking</a>
-            </li>
-
-            <li>
-              <a href="#" className="footer-link">FAQ</a>
-            </li>
-
-            <li>
-              <a href="#" className="footer-link">Contact us</a>
+              <a href="/about-us" className="footer-link">Contact us</a>
             </li>
 
           </ul>
