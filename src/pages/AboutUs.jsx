@@ -27,7 +27,7 @@ function AboutUs() {
             <h2 className="h1 hero-title">Find Your Dream House By Us</h2>
 
             <p className="hero-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+            Finding a place to live when you move from other cities or state is a biggest problem you face.
             </p>
 
             <button>
@@ -102,8 +102,7 @@ function AboutUs() {
             </ul>
 
             <p className="callout">
-              "Enimad minim veniam quis nostrud exercitation
-              llamco laboris. Lorem ipsum dolor sit amet"
+            Our Web-based Application will save time and money of student. It will also save the student from visiting the hostel physically.
             </p>
 
             <button>
@@ -132,16 +131,16 @@ function AboutUs() {
                 </div>
 
                 <h3 className="h3 card-title">
-                  <a href="#">Buy a home</a>
+                  <a href="/">Buy a Room</a>
                 </h3>
 
                 <p className="card-text">
-                  over 1 million+ homes for sale available on the website, we can match you with a house you will want
+                  Rooms for sale available on the website, we can match you with a house you will want
                   to call home.
                 </p>
 
-                <a href="#" className="card-link">
-                  <span>Find A Home</span>
+                <a href="/" className="card-link">
+                  <span>Find A Room</span>
 
                   <ion-icon name="arrow-forward-outline"></ion-icon>
                 </a>
@@ -157,16 +156,16 @@ function AboutUs() {
                 </div>
 
                 <h3 className="h3 card-title">
-                  <a href="#">Rent a home</a>
+                  <a href="/">Rent a Room</a>
                 </h3>
 
                 <p className="card-text">
-                  over 1 million+ homes for sale available on the website, we can match you with a house you will want
+                  Rooms for sale available on the website, we can match you with a house you will want
                   to call home.
                 </p>
 
-                <a href="#" className="card-link">
-                  <span>Find A Home</span>
+                <a href="/" className="card-link">
+                  <span>Find A Room</span>
 
                   <ion-icon name="arrow-forward-outline"></ion-icon>
                 </a>
@@ -182,16 +181,16 @@ function AboutUs() {
                 </div>
 
                 <h3 className="h3 card-title">
-                  <a href="#">Sell a home</a>
+                  <a href="/">Sell a Room</a>
                 </h3>
 
                 <p className="card-text">
-                  over 1 million+ homes for sale available on the website, we can match you with a house you will want
+                  Rooms for sale available on the website, we can match you with a house you will want
                   to call home.
                 </p>
 
-                <a href="#" className="card-link">
-                  <span>Find A Home</span>
+                <a href="/" className="card-link">
+                  <span>Find A Room</span>
 
                   <ion-icon name="arrow-forward-outline"></ion-icon>
                 </a>
