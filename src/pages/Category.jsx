@@ -13,22 +13,54 @@ import { db } from "../firebase.config";
 import { toast } from "react-toastify";
 import Spinner from "../components/Spinner";
 import ListingItem from "../components/ListingItem";
-var searchValue = null;
-function Category() {
-  const [listings, setListings] = useState(null);
-  const [loading, setLoading] = useState(true); //before fetch listings
-  const [lastFetchedListing, setLastFetchedListing] = useState(null);
 
-  const params = useParams();
+var arr = [
+  {
+    data: {
+      name: "bilal",
+    },
+  },
+  {
+    data: {
+      name: "ahmad",
+    },
+  },
+];
+
+var listings = [];
+var data = [];
+function Category() {
+  var [setListings] = useState(null);
+  var [loading, setLoading] = useState(true); //before fetch listings
+  var [lastFetchedListing, setLastFetchedListing] = useState(null);
+
+  const [value, setValue] = useState([]);
+  const handleChange = (e) => {
+    data = listings.filter((option) => {
+      if (e.target.value === undefined || e.target.value === "") {
+        console.log("====================================");
+        console.log(option);
+        console.log("====================================");
+        return option; //set listings to listings
+      } else {
+        return option.data.name
+          .toLowerCase()
+          .includes(e.target.value.toLowerCase());
+      }
+    });
+
+    setValue(data);
+  };
+  var params = useParams();
 
   useEffect(() => {
-    const fetchListings = async () => {
+    var fetchListings = async () => {
       try {
         //Get Reference
-        const listingRef = collection(db, "listings"); //a reference to the collection not the document, listings= are collection what we want
+        var listingRef = collection(db, "listings"); //a reference to the collection not the document, listings= are collection what we want
 
         //Create a Query, take listings ref,
-        const q = query(
+        var q = query(
           listingRef,
           where("type", "==", params.categoryName),
           orderBy("timestamp", "desc"),
@@ -36,12 +68,10 @@ function Category() {
         ); //categoryName coming from app.js route :categoryName
 
         //Execute Query //snapshot
-        const querySnap = await getDocs(q); //takes a query above wali, so ot get docments for the specific query
+        var querySnap = await getDocs(q); //takes a query above wali, so ot get docments for the specific query
 
-        const lastVisible = querySnap.docs[querySnap.docs.length - 1]; //to get to the last one list
+        var lastVisible = querySnap.docs[querySnap.docs.length - 1]; //to get to the last one list
         setLastFetchedListing(lastVisible);
-
-        var listings = [];
 
         querySnap.forEach((doc) => {
           //console.log(doc.data()); coming from db fb
@@ -51,32 +81,23 @@ function Category() {
           });
         });
 
-        setListings(listings); //set listings to listings
         setLoading(false); //false once we get the data
       } catch (error) {
         toast.error("Could not fetch listings");
       }
     };
+
     fetchListings();
   }, [params.categoryName]); //dependency array here
 
-  function handleChange(event) {
-    searchValue = event.target.value;
-    listings.filter((option) =>
-      option.data.name.toLowerCase().includes(searchValue.toLowerCase())
-    );
-    console.log("====================================");
-    console.log(listings);
-    console.log("====================================");
-  }
   // Pagination / Load More
-  const onFetchMoreListings = async () => {
+  var onFetchMoreListings = async () => {
     try {
       // Get reference
-      const listingsRef = collection(db, "listings");
+      var listingsRef = collection(db, "listings");
 
       // Create a query
-      const q = query(
+      var q = query(
         listingsRef,
         where("type", "==", params.categoryName),
         orderBy("timestamp", "desc"),
@@ -85,12 +106,10 @@ function Category() {
       );
 
       // Execute query
-      const querySnap = await getDocs(q);
+      var querySnap = await getDocs(q);
 
-      const lastVisible = querySnap.docs[querySnap.docs.length - 1];
+      var lastVisible = querySnap.docs[querySnap.docs.length - 1];
       setLastFetchedListing(lastVisible);
-
-      const listings = [];
 
       querySnap.forEach((doc) => {
         return listings.push({
@@ -124,18 +143,32 @@ function Category() {
       ) : listings && listings.length > 0 ? (
         <>
           <main>
-            <ul className="categoryListings">
-              {/* below we want to loop through our listings and create a list.map */}
-              {listings.map((listing) => (
-                // in this category component our listing is an object that has .data and .id
-                <ListingItem
-                  listing={listing.data}
-                  id={listing.id}
-                  key={listing.id}
-                />
-              ))}
-            </ul>
+            {value.length === 0 ? (
+              <ul className="categoryListings">
+                {listings.map((listing) => (
+                  // in this category component our listing is an object that has .data and .id
+
+                  <ListingItem
+                    listing={listing.data}
+                    id={listing.id}
+                    key={listing.id}
+                  />
+                ))}
+              </ul>
+            ) : (
+              <ul className="categoryListings">
+                {value.map((listing) => (
+                  // in this category component our listing is an object that has .data and .id
+                  <ListingItem
+                    listing={listing.data}
+                    id={listing.id}
+                    key={listing.id}
+                  />
+                ))}
+              </ul>
+            )}
           </main>
+
           <br />
           <br />
           {lastFetchedListing && ( // if there is last fetch listing
