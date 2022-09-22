@@ -37,7 +37,7 @@ function SignIn() {
       );
 
       if (userCredendial.user) {
-        toast.success("Sign Up Successfully");
+        toast.success("Sign In Successfully");
         navigate("/");
       }
     } catch (error) {
