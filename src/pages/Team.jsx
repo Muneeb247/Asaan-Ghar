@@ -26,8 +26,8 @@ function Team() {
           </div>
           <div className="col-md-12 text-center">
             <div className="pt-2">
-              <h5 className="mt-4 font-weight-medium mb-0">Muneeb Ahmad</h5>
-              <h6 className="subtitle mb-3">Front & Backend Developer</h6>
+              <h5 className="mt-4 font-weight-medium mb-0">Muneeb</h5>
+              <h6 className="subtitle mb-3">Property Specialist</h6>
               <p>You can relay on our amazing features list and also our customer services will be great experience.</p>
               <ul className="list-inline">
                 <li className="list-inline-item"><a href="#" className="text-decoration-none d-block px-1"><i className="icon-social-facebook"></i></a></li>
@@ -50,8 +50,8 @@ function Team() {
           </div>
           <div className="col-md-12 text-center">
             <div className="pt-2">
-              <h5 className="mt-4 font-weight-medium mb-0">Usman Akram</h5>
-              <h6 className="subtitle mb-3">Front End Developer</h6>
+              <h5 className="mt-4 font-weight-medium mb-0">Aqeel</h5>
+              <h6 className="subtitle mb-3">Property Specialist</h6>
               <p>You can relay on our amazing features list and also our customer services will be great experience.</p>
               <ul className="list-inline">
                 <li className="list-inline-item"><a href="#" className="text-decoration-none d-block px-1"><i className="icon-social-facebook"></i></a></li>
@@ -74,8 +74,8 @@ function Team() {
           </div>
           <div className="col-md-12 text-center">
             <div className="pt-2">
-              <h5 className="mt-4 font-weight-medium mb-0">Saqlain Ashraf</h5>
-              <h6 className="subtitle mb-3">SQL Cloud Engineer</h6>
+              <h5 className="mt-4 font-weight-medium mb-0">Saqlain</h5>
+              <h6 className="subtitle mb-3">Property Specialist</h6>
               <p>You can relay on our amazing features list and also our customer services will be great experience.</p>
               <ul className="list-inline">
                 <li className="list-inline-item"><a href="#" className="text-decoration-none d-block px-1"><i className="icon-social-facebook"></i></a></li>
@@ -98,8 +98,8 @@ function Team() {
           </div>
           <div className="col-md-12 text-center">
             <div className="pt-2">
-              <h5 className="mt-4 font-weight-medium mb-0">Mohammad Aqeel</h5>
-              <h6 className="subtitle mb-3">UI/UX Designer</h6>
+              <h5 className="mt-4 font-weight-medium mb-0">Usman</h5>
+              <h6 className="subtitle mb-3">Property Specialist</h6>
               <p>You can relay on our amazing features list and also our customer services will be great experience.</p>
               <ul className="list-inline">
                 <li className="list-inline-item"><a href="#" className="text-decoration-none d-block px-1"><i className="icon-social-facebook"></i></a></li>

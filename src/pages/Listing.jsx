@@ -53,7 +53,7 @@ function Listing() {
           {listing.imgUrls.map((url, index) => (
             <MDBCarouselItem
             className='w-100 d-block'
-            
+            src={url}
             key={index}
             style={{ 
               background:`url(${listing.imgUrls[index]})
