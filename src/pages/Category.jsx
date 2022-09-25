@@ -127,7 +127,12 @@ function Category() {
 
   return (
     <div className="category">
-      <input name="firstName" onChange={handleChange} />
+      {/* Search Bar */}
+      <div class="input-group">
+  <input type="search" class="form-control rounded" onChange={handleChange} placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+  <button type="button" class="btn btn-outline-primary">search</button>
+</div>
+      {/* <input name="firstName" onChange={handleChange} /> */}
       <header>
         <p className="pageHeader">
           {/* we want to show here depends on the category name. so, it depends if it's rent or sell */}
