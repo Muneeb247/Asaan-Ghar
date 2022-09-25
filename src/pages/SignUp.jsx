@@ -77,7 +77,7 @@ function SignUp() {
             <input
               type="text"
               className="nameInput"
-              placeholder="Please Enter Text only"
+              placeholder="Enter your Name"
               id="name"
               value={name}
               pattern="[a-zA-Z]*"
