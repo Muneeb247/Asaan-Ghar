@@ -67,20 +67,25 @@ function SignUp() {
 
   return (
     <>
+    <div className="container-fluid h-custom">
+    <div className="row d-flex justify-content-center align-items-center h-100">
+      <div className="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+          className="img-fluid" alt="Sample image"/>
+      </div>
+      <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
       <div className="pageContainer">
         <header>
           <p className="pageHeader">Register Now!</p>
-          <h4 className="headind2">Sign up Now</h4>
         </header>
         <main>
           <form onSubmit={onSubmit}>
             <input
               type="text"
               className="nameInput"
-              placeholder="Please Enter Text only"
+              placeholder="Name (Text only)"
               id="name"
               value={name}
-              pattern="[a-zA-Z]*"
               onChange={onChange}
             />
             <input
@@ -101,7 +106,7 @@ function SignUp() {
                 id="password"
                 value={password}
                 onChange={onChange}
-                minlength="8"
+                minLength="8"
                 required
               />
 
@@ -116,10 +121,12 @@ function SignUp() {
               Forgot Password
             </Link>
             <div className="signUpBar">
-              <p className="signUpText">Sign Up</p>
-              <button className="signUpButton">
+              {/* <p className="signUpText">Sign Up</p> */}
+              {/* <button className="signUpButton">
                 <ArrowRightIcon fill="#ffffff" width="34px" height="34px" />
-              </button>
+              </button> */}
+              <button className="btn btn-primary btn-lg"
+              style={{paddingLeft: '2.5rem', paddingRight: '2.5rem'}}>Sign Up</button>
             </div>
           </form>
           {/* Google OAuth  */}
@@ -129,6 +136,11 @@ function SignUp() {
           </Link>
         </main>
       </div>
+      </div>
+      </div>
+      </div>
+
+      
     </>
   );
 }

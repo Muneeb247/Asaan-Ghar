@@ -133,6 +133,7 @@ const onEdit = (listingId) => navigate(`/edit-listing/${listingId}`)
 
       <div className="profileCard">
         <form>
+        <label className="">Name</label>
           <input type='text' 
           id='name' 
           className={!changeDetails ? 'profileName' : 'profileNameActive'} 
@@ -140,7 +141,7 @@ const onEdit = (listingId) => navigate(`/edit-listing/${listingId}`)
           value={name}
           onChange={onChange}
           />
-
+<label className="">E-mail</label>
           <input type='text' 
           id='email' // id matches whatever the name of the state, so onChange works correctly
           className={!changeDetails ? 'profileEmail' : 'profileEmailActive'} 
@@ -153,7 +154,7 @@ const onEdit = (listingId) => navigate(`/edit-listing/${listingId}`)
 
       <Link to='/create-listing' className='createListing'>
         <img src={homeIcon} alt="home" />
-        <p>Sell or Rent your Home</p>
+        <p style={{marginBottom: "0"}}>Sell or Rent your Home</p>
         <img src={arrowRight} alt="arrow right" />
       </Link>
 

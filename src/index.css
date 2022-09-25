@@ -655,7 +655,6 @@ button {
 .profileCard {
   background-color: #ffffff;
   border-radius: 1rem;
-  padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.2);
   max-width: 500px;
 }
@@ -675,6 +674,9 @@ button {
   margin: 0.3rem 0;
   font-weight: 600;
   width: 100%;
+  border: 1px solid #1226F1;
+  border-radius: 0.25em;
+  padding-left: 2em;
 }
 .profileNameActive {
   background-color: rgba(44, 44, 44, 0.1);
@@ -705,6 +707,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid #1266F1;
 }
 
 .listingText {
@@ -742,6 +745,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid #00cc66;
 }
 .formButtonActive {
   background-color: #00cc66;
@@ -772,12 +776,14 @@ button {
   padding: 0.9rem 1rem;
   width: 90%;
   max-width: 326px;
+  border: 1px solid #00cc66;
 }
 
 .formInputAddress {
   padding: 0.9rem 1rem;
   width: 90%;
   max-width: 326px;
+ border: 1px solid #00cc66;
 }
 
 .formPriceDiv {
@@ -2510,6 +2516,22 @@ button, a { transition: var(--transition); }
   -webkit-transform: translate3d(0px, -5px, 0px);
   transform: translate3d(0px, -5px, 0px);
 	color: #316ce8;
+}
+/* -----------------------login-------- */
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
 }
 
 }
