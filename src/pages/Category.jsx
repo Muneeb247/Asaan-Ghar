@@ -34,8 +34,8 @@ function Category() {
   var [loading, setLoading] = useState(true); //before fetch listings
   var [lastFetchedListing, setLastFetchedListing] = useState(null);
 
-  const [value, setValue] = useState([]);
-  const handleChange = (e) => {
+  var [value, setValue] = useState([]);
+  var handleChange = (e) => {
     data = listings.filter((option) => {
       if (e.target.value === undefined || e.target.value === "") {
         console.log("====================================");
@@ -134,8 +134,6 @@ function Category() {
           class="form-control rounded"
           onChange={handleChange}
           placeholder="Search"
-          aria-label="Search"
-          aria-describedby="search-addon"
         />
         <button type="button" class="btn btn-outline-primary">
           search

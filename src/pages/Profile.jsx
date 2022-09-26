@@ -149,6 +149,7 @@ function Profile() {
               value={name}
               onChange={onChange}
               pattern="[a-zA-Z\s]+"
+              required
             />
             <label className="">E-mail</label>
             <input

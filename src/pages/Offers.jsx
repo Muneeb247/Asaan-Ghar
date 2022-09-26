@@ -13,12 +13,30 @@ import { db } from "../firebase.config";
 import { toast } from "react-toastify";
 import Spinner from "../components/Spinner";
 import ListingItem from "../components/ListingItem";
-
+var listings = [];
+var data = [];
 function Offers() {
-  const [listings, setListings] = useState(null);
+  const [setListings] = useState(null);
   const [loading, setLoading] = useState(true); //before fetch listings
   const [lastFetchedListing, setLastFetchedListing] = useState(null);
+  var [value, setValue] = useState([]);
 
+  var handleChange = (e) => {
+    data = listings.filter((option) => {
+      if (e.target.value === undefined || e.target.value === "") {
+        console.log("====================================");
+        console.log(option);
+        console.log("====================================");
+        return option; //set listings to listings
+      } else {
+        return option.data.name
+          .toLowerCase()
+          .includes(e.target.value.toLowerCase());
+      }
+    });
+
+    setValue(data);
+  };
   const params = useParams();
 
   useEffect(() => {
@@ -41,8 +59,6 @@ function Offers() {
         const lastVisible = querySnap.docs[querySnap.docs.length - 1]; //to get to the last one list
         setLastFetchedListing(lastVisible);
 
-        const listings = [];
-
         querySnap.forEach((doc) => {
           //console.log(doc.data()); coming from db fb
           return listings.push({
@@ -51,7 +67,6 @@ function Offers() {
           });
         });
 
-        setListings(listings); //set listings to listings
         setLoading(false); //false once we get the data
       } catch (error) {
         toast.error("Could not fetch listings");
@@ -104,8 +119,7 @@ function Offers() {
           type="search"
           class="form-control rounded"
           placeholder="Search"
-          aria-label="Search"
-          aria-describedby="search-addon"
+          onChange={handleChange}
         />
         <button type="button" class="btn btn-outline-primary">
           search
@@ -120,17 +134,30 @@ function Offers() {
       ) : listings && listings.length > 0 ? (
         <>
           <main>
-            <ul className="categoryListings">
-              {/* below we want to loop through our listings and create a list.map */}
-              {listings.map((listing) => (
-                // in this category component our listing is an object that has .data and .id
-                <ListingItem
-                  listing={listing.data}
-                  id={listing.id}
-                  key={listing.id}
-                />
-              ))}
-            </ul>
+            {value.length === 0 ? (
+              <ul className="categoryListings">
+                {listings.map((listing) => (
+                  // in this category component our listing is an object that has .data and .id
+
+                  <ListingItem
+                    listing={listing.data}
+                    id={listing.id}
+                    key={listing.id}
+                  />
+                ))}
+              </ul>
+            ) : (
+              <ul className="categoryListings">
+                {value.map((listing) => (
+                  // in this category component our listing is an object that has .data and .id
+                  <ListingItem
+                    listing={listing.data}
+                    id={listing.id}
+                    key={listing.id}
+                  />
+                ))}
+              </ul>
+            )}
           </main>
 
           <br />
