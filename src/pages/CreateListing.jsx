@@ -10,7 +10,7 @@ import Spinner from '../components/Spinner'
 import createListingImg from '../assets/createListingImg.jpg'
 
 function CreateListing() {
-    const [geolocationEnabled, setGeolocationEnabled] = useState(true)
+    const [geolocationEnabled, setGeolocationEnabled] = useState(false)
     const [loading, setLoading] = useState(false)
     const [formData, setFormData] = useState({
         type: 'rent',
@@ -261,7 +261,6 @@ function CreateListing() {
             maxLength='32'
             minLength='10'
             required
-            pattern="[a-zA-Z]*"
           />
 
                 
