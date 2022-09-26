@@ -129,9 +129,18 @@ function Category() {
     <div className="category">
       {/* Search Bar */}
       <div class="input-group">
-  <input type="search" class="form-control rounded" onChange={handleChange} placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-  <button type="button" class="btn btn-outline-primary">search</button>
-</div>
+        <input
+          type="search"
+          class="form-control rounded"
+          onChange={handleChange}
+          placeholder="Search"
+          aria-label="Search"
+          aria-describedby="search-addon"
+        />
+        <button type="button" class="btn btn-outline-primary">
+          search
+        </button>
+      </div>
       {/* <input name="firstName" onChange={handleChange} /> */}
       <header>
         <p className="pageHeader">
@@ -177,9 +186,7 @@ function Category() {
           <br />
           <br />
           {lastFetchedListing && ( // if there is last fetch listing
-            <p className="loadMore" onClick={onFetchMoreListings}>
-              Load More
-            </p>
+            <p>{/* Load More */}</p>
           )}
         </>
       ) : (
