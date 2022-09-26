@@ -1,5 +1,9 @@
 import React from 'react'
 import muneeb from '../assets/muneeb.jpg'
+import usman from '../assets/usman.jpg'
+import saqlain from '../assets/saqlain.jpg'
+
+
 
 function Team() {
   return (
@@ -42,7 +46,7 @@ function Team() {
         {/* <!-- Row --> */}
         <div className="row">
           <div className="col-md-12">
-            <img src={muneeb} alt="wrapkit" className="img-fluid rounded-circle" />
+            <img src={usman} alt="wrapkit" className="img-fluid rounded-circle" />
           </div>
           <div className="col-md-12 text-center">
             <div className="pt-2">
@@ -66,7 +70,7 @@ function Team() {
         {/* <!-- Row --> */}
         <div className="row">
           <div className="col-md-12">
-            <img src={muneeb} alt="wrapkit" className="img-fluid rounded-circle" />
+            <img src={saqlain} alt="wrapkit" className="img-fluid rounded-circle" />
           </div>
           <div className="col-md-12 text-center">
             <div className="pt-2">

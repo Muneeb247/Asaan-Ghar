@@ -7,9 +7,10 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { v4 as uuidv4 } from 'uuid'
 import Spinner from '../components/Spinner'
+import createListingImg from '../assets/createListingImg.jpg'
 
 function CreateListing() {
-    const [geolocationEnabled, setGeolocationEnabled] = useState(false)
+    const [geolocationEnabled, setGeolocationEnabled] = useState(true)
     const [loading, setLoading] = useState(false)
     const [formData, setFormData] = useState({
         type: 'rent',
@@ -217,7 +218,12 @@ function CreateListing() {
       }
 
   return (
-    <div className='profile'>
+    <>
+    <div className="container-fluid h-custom">
+    <div className="row d-flex justify-content-center align-items-center h-100">
+
+      <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+      <div className='profile'>
         <header>
             <p className='pageHeader'>Create a Listing</p>
         </header>
@@ -255,6 +261,7 @@ function CreateListing() {
             maxLength='32'
             minLength='10'
             required
+            pattern="[a-zA-Z]*"
           />
 
                 
@@ -271,6 +278,7 @@ function CreateListing() {
                 min='1'
                 max='50'
                 required
+                style={{border: '1px solid #00cc66'}}
               />
             </div>
             <div>
@@ -284,6 +292,7 @@ function CreateListing() {
                 min='1'
                 max='50'
                 required
+                style={{border: '1px solid #00cc66'}}
               />
             </div>
           </div>
@@ -422,6 +431,7 @@ function CreateListing() {
               min='50'
               max='750000000'
               required
+              style={{border: '1px solid #00cc66'}}
             />
             {type === 'rent' && <p className='formPriceText'>Rs. / Month</p>}
           </div>
@@ -440,6 +450,7 @@ function CreateListing() {
                 min='50'
                 max='750000000'
                 required={offer}
+                style={{border: '1px solid #00cc66'}}
               />
             </>
           )}
@@ -466,7 +477,15 @@ function CreateListing() {
           </button>
           </form>
           </main>
+          </div>
     </div>
+    <div className="col-md-9 col-lg-6 col-xl-5">
+        <img src={createListingImg}
+          className="img-fluid" alt="Sample image"/>
+      </div>
+      </div>
+      </div>
+    </>
   )
 }
 

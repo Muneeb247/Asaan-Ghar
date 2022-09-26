@@ -12,6 +12,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { v4 as uuidv4 } from 'uuid'
 import Spinner from '../components/Spinner'
+import rentCategoryImage from '../assets/jpg/rentCategoryImage.jpg'
 
 function EditListing() {
   // eslint-disable-next-line
@@ -246,7 +247,15 @@ function EditListing() {
   }
 
   return (
-    <div className='profile'>
+    <>
+    <div className="container-fluid h-custom">
+    <div className="row d-flex justify-content-center align-items-center h-100">
+      <div className="col-md-9 col-lg-6 col-xl-5">
+        <img src={rentCategoryImage}
+          className="img-fluid" alt="House image"/>
+      </div>
+      <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+      <div className='profile'>
       <header>
         <p className='pageHeader'>Edit Listing</p>
       </header>
@@ -285,6 +294,7 @@ function EditListing() {
             maxLength='32'
             minLength='10'
             required
+            pattern="[a-zA-Z]*"
           />
 
           <div className='formRooms flex'>
@@ -299,6 +309,7 @@ function EditListing() {
                 min='1'
                 max='50'
                 required
+                style={{border: '1px solid #00cc66'}}
               />
             </div>
             <div>
@@ -312,6 +323,7 @@ function EditListing() {
                 min='1'
                 max='50'
                 required
+                style={{border: '1px solid #00cc66'}}
               />
             </div>
           </div>
@@ -376,6 +388,7 @@ function EditListing() {
             value={address}
             onChange={onMutate}
             required
+            style={{border: '1px solid #00cc66'}}
           />
 
           {!geolocationEnabled && (
@@ -389,6 +402,7 @@ function EditListing() {
                   value={latitude}
                   onChange={onMutate}
                   required
+                  style={{border: '1px solid #00cc66'}}
                 />
               </div>
               <div>
@@ -400,6 +414,7 @@ function EditListing() {
                   value={longitude}
                   onChange={onMutate}
                   required
+                  style={{border: '1px solid #00cc66'}}
                 />
               </div>
             </div>
@@ -440,8 +455,9 @@ function EditListing() {
               min='50'
               max='750000000'
               required
+              style={{border: '1px solid #00cc66'}}
             />
-            {type === 'rent' && <p className='formPriceText'>$ / Month</p>}
+            {type === 'rent' && <p className='formPriceText'>Rs. / Month</p>}
           </div>
 
           {offer && (
@@ -456,6 +472,7 @@ function EditListing() {
                 min='50'
                 max='750000000'
                 required={offer}
+                style={{border: '1px solid #00cc66'}}
               />
             </>
           )}
@@ -480,6 +497,13 @@ function EditListing() {
         </form>
       </main>
     </div>
+        </div>
+        </div>
+      </div>
+
+   
+    </>
+    
   )
 }
 
