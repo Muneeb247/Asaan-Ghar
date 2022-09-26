@@ -148,11 +148,11 @@ function Profile() {
               disabled={!changeDetails}
               value={name}
               onChange={onChange}
-              pattern="[A-Za-z0-9]+"
+              pattern="[a-zA-Z\s]+"
             />
             <label className="">E-mail</label>
             <input
-              type="text"
+              type="email"
               id="email" // id matches whatever the name of the state, so onChange works correctly
               className={!changeDetails ? "profileEmail" : "profileEmailActive"}
               disabled={!changeDetails}

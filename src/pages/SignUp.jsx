@@ -67,80 +67,87 @@ function SignUp() {
 
   return (
     <>
-    <div className="container-fluid h-custom">
-    <div className="row d-flex justify-content-center align-items-center h-100">
-      <div className="col-md-9 col-lg-6 col-xl-5">
-        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-          className="img-fluid" alt="Sample image"/>
-      </div>
-      <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-      <div className="pageContainer">
-        <header>
-          <p className="pageHeader">Register Now!</p>
-        </header>
-        <main>
-          <form onSubmit={onSubmit}>
-            <input
-              type="text"
-              className="nameInput"
-              placeholder="Name (Text only)"
-              id="name"
-              value={name}
-              onChange={onChange}
+      <div className="container-fluid h-custom">
+        <div className="row d-flex justify-content-center align-items-center h-100">
+          <div className="col-md-9 col-lg-6 col-xl-5">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+              className="img-fluid"
+              alt="Sample image"
             />
-            <input
-              type="email"
-              className="emailInput"
-              placeholder="Email"
-              id="email"
-              pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
-              value={email}
-              onChange={onChange}
-            />
+          </div>
+          <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <div className="pageContainer">
+              <header>
+                <p className="pageHeader">Register Now!</p>
+              </header>
+              <main>
+                <form onSubmit={onSubmit}>
+                  <input
+                    type="text"
+                    className="nameInput"
+                    placeholder="Name (Text only)"
+                    id="name"
+                    value={name}
+                    onChange={onChange}
+                    pattern="[a-zA-Z\s]+"
+                  />
+                  <input
+                    type="email"
+                    className="emailInput"
+                    placeholder="Email"
+                    id="email"
+                    pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+                    value={email}
+                    onChange={onChange}
+                    required
+                  />
 
-            <div className="passwordInputDiv">
-              <input
-                type={showPassword ? "text" : "password"} //if showpassword is true than field type is test, if not than password type
-                className="passwordInput"
-                placeholder="Password"
-                id="password"
-                value={password}
-                onChange={onChange}
-                minLength="8"
-                required
-              />
+                  <div className="passwordInputDiv">
+                    <input
+                      type={showPassword ? "text" : "password"} //if showpassword is true than field type is test, if not than password type
+                      className="passwordInput"
+                      placeholder="Password"
+                      id="password"
+                      value={password}
+                      onChange={onChange}
+                      minLength="8"
+                      required
+                    />
 
-              <img
-                src={visibilityIcon}
-                alt="show Password"
-                className="showPassword"
-                onClick={() => setShowPassword((prevState) => !prevState)}
-              />
-            </div>
-            <Link to="/forgot-password" className="forgotPasswordLink">
-              Forgot Password
-            </Link>
-            <div className="signUpBar">
-              {/* <p className="signUpText">Sign Up</p> */}
-              {/* <button className="signUpButton">
+                    <img
+                      src={visibilityIcon}
+                      alt="show Password"
+                      className="showPassword"
+                      onClick={() => setShowPassword((prevState) => !prevState)}
+                    />
+                  </div>
+                  <Link to="/forgot-password" className="forgotPasswordLink">
+                    Forgot Password
+                  </Link>
+                  <div className="signUpBar">
+                    {/* <p className="signUpText">Sign Up</p> */}
+                    {/* <button className="signUpButton">
                 <ArrowRightIcon fill="#ffffff" width="34px" height="34px" />
               </button> */}
-              <button className="btn btn-primary btn-lg"
-              style={{paddingLeft: '2.5rem', paddingRight: '2.5rem'}}>Sign Up</button>
+                    <button
+                      className="btn btn-primary btn-lg"
+                      style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
+                    >
+                      Sign Up
+                    </button>
+                  </div>
+                </form>
+                {/* Google OAuth  */}
+                <OAuth />
+                <Link to="/sign-in" className="registerLink">
+                  Sign In Instead
+                </Link>
+              </main>
             </div>
-          </form>
-          {/* Google OAuth  */}
-          <OAuth />
-          <Link to="/sign-in" className="registerLink">
-            Sign In Instead
-          </Link>
-        </main>
+          </div>
+        </div>
       </div>
-      </div>
-      </div>
-      </div>
-
-      
     </>
   );
 }
